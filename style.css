@@ -1,0 +1,264 @@
+:root{
+    --black : #212222 ;
+    --white : aliceblue ; 
+    --blue : rgb(3, 3, 102) ;
+    --background : rgb(153, 149, 149) ;
+    scroll-behavior: smooth ;
+}
+
+*{
+    margin: 0 ;
+    padding: 0 ;
+    box-sizing: border-box ;
+    font-family: Arial, Helvetica, sans-serif ;
+    color: var(--black) ;
+}
+
+body{
+    width: 100vw ;
+    height: 100vh ;
+    background-color: var(--background) ;
+    overflow-x: hidden ;
+}
+
+a{
+    text-decoration: none ;
+}
+
+header{
+    position: fixed ;
+    top: 0 ;
+    z-index: 2 ;
+}
+
+nav{
+    width: 100vw ;
+    height: 60px ;
+    display: flex ;
+    align-items: center ;
+    justify-content: space-between ;
+    background-color: var(--blue);
+    padding: 0 50px ;
+    z-index: 2 ;
+}
+
+nav h1{
+    font-family: 'EB Garamond', serif ;
+}
+
+nav img{
+    width: 40px ;
+    height: 40px ;
+    border-radius: 50% ;
+}
+
+nav div{
+    display: flex ;
+
+}
+
+nav div h1{
+    margin-left: 10px ;
+    color: var(--white);
+}
+
+.fa-bars{
+    font-size: 30px ;
+    color: var(--white);
+}
+
+.menu{
+    position: sticky ;
+    top: 0px ;
+}
+
+menu{
+    position: absolute ;
+    top: 60px ;
+    left: 0 ;
+    width: 100vw ;
+    height: 250px ;
+    background-color: var(--black);
+    padding: 50px ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: space-around ;
+    align-items: flex-start ;
+    transition: transform .3s linear ;
+    z-index: 1 ;
+    transform: translateY(-100%);
+}
+
+menu a{
+    font-size: 20px ;
+    color: var(--white);
+}
+
+.transform{
+    transform: translateY(0%);
+}
+
+/* main start */
+
+main{
+    width: 100vw ;
+    height: 100vh ;
+    padding: 200px 50px ;
+    display: flex ;
+}
+
+.banner{
+    width: 100vw ;
+    height: 100vh ;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+}
+
+.banner h1{
+    font-size: 30px ;
+}
+
+#call-logo{
+    margin-top: 70px ;
+    width: 300px ;
+}
+
+.fa-arrow-down{
+    font-size: 40px ;
+}
+
+.down-icon{
+    margin-top: 50px ;
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    width: 60px ;
+    height: 60px ;
+    background-color: transparent ;
+    border: 4px solid black ;
+    border-radius: 50% ;
+}
+
+/* sign part start */
+
+.sign-part{
+    width: 100vw ;
+    height: 100vh ;
+    padding: 50px ;
+}
+
+.sign-part-container{
+    width: 100% ;
+    height: 100% ;
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center ;
+}
+
+.information{
+    width: 100vw ;
+    height: 200px ;
+    background-color: var(--blue);
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+}
+
+.information p{
+    width: 300px ;
+    font-size: 23px ;
+    font-weight: bold ;
+    text-align: center ;
+    color: var(--white);
+}
+
+form{
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    margin: 30px 0 ;
+}
+
+input{
+    width: 350px ;
+    height: 40px ;
+    border: none ;
+    outline: none ;
+    border-radius: 10px ;
+    font-size: 16px ;
+    padding-right: 10px ;
+    font-size: 16px ;
+    color: black ;
+}
+
+input::placeholder{
+    color: black ;
+    font-size: 16px ;
+}
+
+button{
+    margin-top: 20px ;
+    width: 100px ;
+    height: 40px ;
+    background-color: var(--blue);
+    border: none ;
+    outline: none ;
+    border-radius: 5px ;
+    color: var(--white);
+    font-size: 16px ;
+}
+
+span{
+    margin-bottom: 20px ;
+    font-size: 23px ;
+}
+
+@media (max-width: 400px ) {
+    .banner h1{
+        font-size: 25px ;
+    }
+
+    #call-logo{
+        width: 250px ;
+    }
+    
+    main{
+        padding: 200px 10px ;
+    }
+
+    input{
+        width: 200px ;
+    }
+
+    .information p{
+        width: 250px ;
+    }
+}
+
+@media (max-width: 260px ) {
+    nav{
+        padding: 0 10px ;
+    }
+
+    .banner h1{
+        font-size: 20px ;
+    }
+
+    #call-logo{
+        width: 200px ;
+    }
+    
+    main{
+        padding: 200px 10px ;
+    }
+
+    input{
+        width: 200px ;
+    }
+
+    .information p{
+        width: 200px ;
+    }
+}
